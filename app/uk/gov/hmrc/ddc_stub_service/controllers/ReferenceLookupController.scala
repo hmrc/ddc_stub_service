@@ -32,8 +32,8 @@ class ReferenceLookupController @Inject()(environment: Environment, cc: Controll
 
   private val listHelper: ListHelper = new ListHelper()
 
-  def getReferenceData(mainTrans: String, subTrans: Option[String]) = Action {
-    environment.getExistingFile(basePath + refPath + mainTrans + ".json") match {
+  def getReferenceData(descType: String, mainTrans: String, subTrans: String) = Action {
+    environment.getExistingFile(basePath + refPath + descType + "-" + mainTrans + "-" + subTrans + ".json") match {
       case Some(file) => Ok(Source.fromFile(file).mkString)
       case _ => NotFound("file not found")
     }

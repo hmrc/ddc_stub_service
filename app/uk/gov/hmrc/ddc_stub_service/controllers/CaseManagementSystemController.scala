@@ -30,25 +30,16 @@ class CaseManagementSystemController @Inject()(environment: Environment, cc: Con
   private val basePath = "conf/resources/data"
   private val casePath = "/debt/"
 
-  private val errorUtr = "5005005005"
-
   private val listHelper: ListHelper = new ListHelper()
 
-  def getCaseDetails(UTR: String, duties: Option[String]) = Action {
-    checkForError(
-      UTR,
-      environment.getExistingFile(basePath + casePath + UTR + ".json") match {
+  def getCaseDetails(uniqueItemReference: String, duties: Option[String]) = Action {
+      environment.getExistingFile(basePath + casePath + uniqueItemReference + ".json") match {
         case Some(file) => Ok(Source.fromFile(file).mkString)
         case _ => NotFound("file not found")
       }
-    )
   }
 
   def getList() = Action {
     Ok(listHelper.getList(basePath + casePath))
   }
-
-  private def checkForError(utr: String, block: Result) = if(utr == errorUtr) {
-    InternalServerError("An error occurred")
-  } else block
 }

@@ -1,7 +1,7 @@
 # microservice specific routes
 
-GET        /hello-world             uk.gov.hmrc.ddc_stub_service.controllers.MicroserviceHelloWorldController.hello
-GET        /debt                    uk.gov.hmrc.ddc_stub_service.controllers.CaseManagementSystemController.getList
-GET        /debt/:uniqueReference   uk.gov.hmrc.ddc_stub_service.controllers.CaseManagementSystemController.getCaseDetails(uniqueReference: String, duties: Option[String])
-GET        /data                    uk.gov.hmrc.ddc_stub_service.controllers.ReferenceLookupController.getList
-GET        /data/:mainTrans         uk.gov.hmrc.ddc_stub_service.controllers.ReferenceLookupController.getReferenceData(mainTrans: String, subTrans: Option[String])
+GET        /hello-world                                                 uk.gov.hmrc.ddc_stub_service.controllers.MicroserviceHelloWorldController.hello
+GET        /debt                                                        uk.gov.hmrc.ddc_stub_service.controllers.CaseManagementSystemController.getList
+GET        /debt/:uniqueItemReference                                   uk.gov.hmrc.ddc_stub_service.controllers.CaseManagementSystemController.getCaseDetails(uniqueItemReference: String, duties: Option[String])
+GET        /data                                                        uk.gov.hmrc.ddc_stub_service.controllers.ReferenceLookupController.getList
+GET        /data/:type/mainTrans/:mainTrans/subTrans/:subTrans          uk.gov.hmrc.ddc_stub_service.controllers.ReferenceLookupController.getReferenceData(type: String, mainTrans: String, subTrans: String)
