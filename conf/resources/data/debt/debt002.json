@@ -1,6 +1,5 @@
 {
-  "debt002": {
-    "duties": [
+  "duties": [
       {
         "debtItemChargeId": "duty01",
         "originalAmount": 300000,
@@ -31,8 +30,7 @@
         "dateCalculationTo": "2021-10-31",
         "paymentHistory": []
       }
-    ]
-  },
+    ],
   "breathingSpaces": [
     {
       "debtRespiteFrom": "2021-04-04",
