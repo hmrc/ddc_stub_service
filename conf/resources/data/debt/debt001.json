@@ -1,5 +1,4 @@
 {
-  "debt001": {
     "duties": [
       {
         "debtItemChargeId": "duty01",
@@ -21,8 +20,7 @@
         "dateCalculationTo": "2021-04-14",
         "paymentHistory": []
       }
-    ]
-  },
+    ],
   "breathingSpaces": [
     {
       "debtRespiteFrom": "2021-02-04",
