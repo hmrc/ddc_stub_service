@@ -32,11 +32,16 @@ class CaseManagementSystemController @Inject()(environment: Environment, cc: Con
 
   private val listHelper: ListHelper = new ListHelper()
 
-  def getCaseDetails(uniqueItemReference: String, duties: Option[String]) = Action {
+  def getCaseDetails(uniqueItemReference: String, duties: Option[String]) = Action { request =>
+    val testOnlyResponseCode: Option[String] = request.headers.get("testOnlyResponseCode")
+    if(testOnlyResponseCode.isDefined) {
+      Results.Status(testOnlyResponseCode.map(_.toInt).getOrElse(500))
+    } else {
       environment.getExistingFile(basePath + casePath + uniqueItemReference + ".json") match {
         case Some(file) => Ok(Source.fromFile(file).mkString)
         case _ => NotFound("file not found")
       }
+    }
   }
 
   def getList() = Action {
