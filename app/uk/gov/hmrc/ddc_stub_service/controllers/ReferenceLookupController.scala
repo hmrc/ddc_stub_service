@@ -32,10 +32,15 @@ class ReferenceLookupController @Inject()(environment: Environment, cc: Controll
 
   private val listHelper: ListHelper = new ListHelper()
 
-  def getReferenceData(descType: String, mainTrans: String, subTrans: String) = Action {
-    environment.getExistingFile(basePath + refPath + descType + "-" + mainTrans + "-" + subTrans + ".json") match {
-      case Some(file) => Ok(Source.fromFile(file).mkString)
-      case _ => NotFound("file not found")
+  def getReferenceData(descType: String, mainTrans: String, subTrans: String) = Action { request =>
+    val testOnlyResponseCode: Option[String] = request.headers.get("testOnlyResponseCode")
+    if (testOnlyResponseCode.isDefined) {
+      Results.Status(testOnlyResponseCode.map(_.toInt).getOrElse(500))
+    } else {
+      environment.getExistingFile(basePath + refPath + descType + "-" + mainTrans + "-" + subTrans + ".json") match {
+        case Some(file) => Ok(Source.fromFile(file).mkString)
+        case _ => NotFound("file not found")
+      }
     }
   }
 
