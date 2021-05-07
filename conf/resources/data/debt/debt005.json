@@ -1,7 +1,7 @@
 {
   "duties": [
     {
-      "debtItemChargeId": "duty06",
+      "dutyID": "duty06",
       "originalAmount": 400000,
       "mainTrans": "5350",
       "subTrans": "7012",

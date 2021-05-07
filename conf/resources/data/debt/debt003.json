@@ -1,7 +1,7 @@
 {
     "duties": [
       {
-        "debtItemChargeId": "duty01",
+        "dutyID": "duty01",
         "originalAmount": 500000,
         "mainTrans": "5330",
         "subTrans": "7006",
@@ -12,7 +12,7 @@
           "dateOfPayment" : "2020-02-23"}]
       },
       {
-        "debtItemChargeId": "duty02",
+        "dutyID": "duty02",
         "originalAmount": 400000,
         "mainTrans": "1525",
         "subTrans": "1000",
