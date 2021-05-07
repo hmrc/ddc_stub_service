@@ -1,7 +1,7 @@
 {
   "duties": [
       {
-        "debtItemChargeId": "duty01",
+        "dutyID": "duty01",
         "originalAmount": 300000,
         "mainTrans": "1085",
         "subTrans": "1000",
@@ -11,7 +11,7 @@
         "paymentHistory": []
       },
       {
-        "debtItemChargeId": "duty02",
+        "dutyID": "duty02",
         "originalAmount": 600000,
         "mainTrans": "1545",
         "subTrans": "1090",
@@ -21,7 +21,7 @@
         "paymentHistory": []
       },
       {
-        "debtItemChargeId": "duty03",
+        "dutyID": "duty03",
         "originalAmount": 200000,
         "mainTrans": "1525",
         "subTrans": "1000",
