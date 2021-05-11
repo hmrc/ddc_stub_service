@@ -7,7 +7,7 @@
       "subTrans": "7012",
       "interestStartDate": "2019-02-04",
       "dateCreated": "2019-02-04",
-      "dateCalculationTo": "2020-05-15",
+      "interestRequestedTo": "2020-05-15",
       "paymentHistory": [
         {"amountPaid" : 100000,
           "dateOfPayment" : "2020-02-23"},

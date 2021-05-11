@@ -7,7 +7,7 @@
         "subTrans": "1000",
         "interestStartDate": "2018-06-10",
         "dateCreated": "2018-06-10",
-        "dateCalculationTo": "2020-02-10",
+        "interestRequestedTo": "2020-02-10",
         "paymentHistory": []
       },
       {
@@ -17,7 +17,7 @@
         "subTrans": "1090",
         "interestStartDate": "2020-05-01",
         "dateCreated": "2020-06-01",
-        "dateCalculationTo": "2021-08-10",
+        "interestRequestedTo": "2021-08-10",
         "paymentHistory": []
       },
       {
@@ -27,7 +27,7 @@
         "subTrans": "1000",
         "interestStartDate": "2021-01-01",
         "dateCreated": "2021-01-01",
-        "dateCalculationTo": "2021-10-31",
+        "interestRequestedTo": "2021-10-31",
         "paymentHistory": []
       }
     ],
